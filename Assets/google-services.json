@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "348205482193",
+    "project_id": "kidgames-19112003",
+    "storage_bucket": "kidgames-19112003.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348205482193:android:53feea59f5438566b5c5f0",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.com.unity.template.mobile2D"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAu-M3WpC1sNb4ccXuA84lqouD4uoJK27E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

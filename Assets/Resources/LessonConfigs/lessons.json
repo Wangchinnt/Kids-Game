@@ -1,0 +1,212 @@
+{
+    "lessons": [
+        {
+            "lessonId": 1,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Làm quen với các số đến 10",
+            "lessonName": "Bài 1: Các số 1, 2, 3",
+            "lessonDescription": "Làm quen với các số 1, 2, 3",
+            "valueRange": [1, 3],
+            "numberOfQuestions": 7,
+            "questions": [
+                {
+                    "expectedValue": 1,
+                    "isFixedValue": true,
+                    "diamondWillEarn": 10
+                },
+                {
+                    "expectedValue": 2,
+                    "isFixedValue": true,
+                    "diamondWillEarn": 20
+                },
+                {
+                    "expectedValue": 3,
+                    "isFixedValue": true,
+                    "diamondWillEarn": 30
+                },
+                {
+                    "expectedValue": 0,
+                    "isFixedValue": false,
+                    "diamondWillEarn": 40
+                },
+                {
+                    "expectedValue": 0,
+                    "isFixedValue": false,
+                    "diamondWillEarn": 50
+                },
+                {
+                    "expectedValue": 0,
+                    "isFixedValue": false,
+                    "diamondWillEarn": 60
+                },
+                {
+                    "expectedValue": 0,
+                    "isFixedValue": false,
+                    "diamondWillEarn": 70
+                }
+            ],
+            "expWillEarn": 1,
+            "videoSupportLink": "https://www.youtube.com/watch?v=F7Knymx-u_4",
+            "miniGame": "CountingGame",
+            "score": 0,
+            "time": 0,
+            "isCompleted": false
+        },
+        {
+            "lessonId": 2,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Làm quen với các số đến 10",
+            "lessonName": "Bài 2: Các số 4, 5, 6",
+            "lessonDescription": "Làm quen với các số 4, 5, 6",
+            "valueRange": [4, 6],
+            "numberOfQuestions": 7,
+            "questions": [
+                {
+                    "expectedValue": 4,
+                    "isFixedValue": true,
+                    "diamondWillEarn": 20
+                },
+                {
+                    "expectedValue": 5,
+                    "isFixedValue": true,
+                    "diamondWillEarn": 30
+                },
+                {
+                    "expectedValue": 6,
+                    "isFixedValue": true,
+                    "diamondWillEarn": 40
+                },
+                {
+                    "expectedValue": 0,
+                    "isFixedValue": false,
+                    "diamondWillEarn": 50
+                },
+                {
+                    "expectedValue": 0,
+                    "isFixedValue": false,
+                    "diamondWillEarn": 60
+                },
+                {
+                    "expectedValue": 0,
+                    "isFixedValue": false,
+                    "diamondWillEarn": 70
+                },
+                {
+                    "expectedValue": 0,
+                    "isFixedValue": false,
+                    "diamondWillEarn": 80
+                }
+            ],
+            "expWillEarn": 2,
+            "videoSupportLink": "https://www.youtube.com/watch?v=F7Knymx-u_4",
+            "miniGame": "CountingGame",
+            "score": 0,
+            "time": 0,
+            "isCompleted": false
+        },
+        {
+            "lessonId": 3,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Làm quen với các số đến 10",
+            "lessonName": "Bài 3: Các số 7, 8, 9, 10",
+            "lessonDescription": "Làm quen với các số 7, 8, 9, 10",
+            "valueRange": [7, 10],
+            "numberOfQuestions": 7,
+            "questions": [
+                {
+                    "expectedValue": 7,
+                    "isFixedValue": true,
+                    "diamondWillEarn": 30
+                },
+                {
+                    "expectedValue": 8,
+                    "isFixedValue": true,
+                    "diamondWillEarn": 40
+                },
+                {
+                    "expectedValue": 9,
+                    "isFixedValue": true,
+                    "diamondWillEarn": 50
+                },
+                {
+                    "expectedValue": 10,
+                    "isFixedValue": true,
+                    "diamondWillEarn": 60
+                },
+                {
+                    "expectedValue": 0,
+                    "isFixedValue": false,
+                    "diamondWillEarn": 70
+                },
+                {
+                    "expectedValue": 0,
+                    "isFixedValue": false,
+                    "diamondWillEarn": 80
+                },
+                {
+                    "expectedValue": 0,
+                    "isFixedValue": false,
+                    "diamondWillEarn": 90
+                }
+            ],
+            "expWillEarn": 3,
+            "videoSupportLink": "https://www.youtube.com/watch?v=F7Knymx-u_4",
+            "miniGame": "CountingGame",
+            "score": 0,
+            "time": 0,
+            "isCompleted": false
+        },
+        {
+            "lessonId": 4,
+            "chapterId": 1,
+            "chapterName": "Chương 1: Làm quen với các số đến 10",
+            "lessonName": "Bài 4: Nhiều hơn - Ít hơn - Bằng nhau",
+            "lessonDescription": "Học về so sánh các chữ số trong phạm vi 10",
+            "valueRange": [1, 10],
+            "numberOfQuestions": 7,
+            "questions": [
+                {
+                    "expectedValue": -2,
+                    "isFixedValue": true,
+                    "diamondWillEarn": 10
+                },
+                {
+                    "expectedValue": -1,
+                    "isFixedValue": true,
+                    "diamondWillEarn": 20
+                },
+                {
+                    "expectedValue": 0,
+                    "isFixedValue": true,
+                    "diamondWillEarn": 30
+                },
+                {
+                    "expectedValue": 0,
+                    "isFixedValue": false,
+                    "diamondWillEarn": 40
+                },
+                {
+                    "expectedValue": 0,
+                    "isFixedValue": false,
+                    "diamondWillEarn": 50
+                },
+                {
+                    "expectedValue": 0,
+                    "isFixedValue": false,
+                    "diamondWillEarn": 60
+                },
+                {
+                    "expectedValue": 0,
+                    "isFixedValue": false,
+                    "diamondWillEarn": 70
+                }
+            ],
+            "expWillEarn": 4,
+            "videoSupportLink": "https://www.youtube.com/watch?v=F7Knymx-u_4",
+            "miniGame": "ComparingGame",
+            "score": 0,
+            "time": 0,
+            "isCompleted": false
+        }
+    ]
+} 

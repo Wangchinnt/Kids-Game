@@ -3,15 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - AnswerButton
+  - AnswerBox
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - paticle
   - Water
   - UI
-  - 
+  - LoadingScreen
   - 
   - 
   - 
