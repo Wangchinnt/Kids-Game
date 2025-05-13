@@ -1,79 +1,154 @@
 ﻿using System;
-using UnityEngine;
-using UnityEngine.EventSystems;
+using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using DG.Tweening;
+using UnityEngine.Serialization;
 
 public class AnswerButton : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    public int value; // Value of the button
+    [SerializeField] private string _value;
     private Vector3 _initialPosition; // Save the initial position
     private RectTransform _rectTransform;
     private Canvas _canvas;
-    private CountingGame _countingGame;
-    private Vector3 _answerBoxPosition;
+    private Button _button;
+    public bool isClickable = true;
     [SerializeField] private float tolerance = 2f; 
-  
+    [SerializeField] private List<GameObject> answerBoxs;
+    private MiniGame _currentGame;
+    
+    enum Direction
+    {
+        Up,
+        Down,
+        Left,
+        Right
+    }
+
+    Direction VectorToDirection(Vector2Int dir)
+    {
+        if (dir == Vector2Int.up) return Direction.Up;
+        if (dir == Vector2Int.down) return Direction.Down;
+        if (dir == Vector2Int.left) return Direction.Left;
+        if (dir == Vector2Int.right) return Direction.Right;
+
+        throw new Exception("Hướng không hợp lệ");
+    }
+
     private void Start()
     {
         _rectTransform = GetComponent<RectTransform>();
         _canvas = GetComponentInParent<Canvas>(); 
+        _button = GetComponent<Button>();
         _initialPosition = _rectTransform.anchoredPosition;
-        _countingGame = FindObjectOfType<CountingGame>();
-        _answerBoxPosition = _countingGame.answerBox.GetComponent<RectTransform>().position;
+        _currentGame = FindObjectOfType<MiniGame>();
+        // get all answer boxs in the scene
+        answerBoxs = new List<GameObject>(GameObject.FindGameObjectsWithTag("AnswerBox"));
+        transform.DOShakeScale(1, 0.1f, 1, 0, false, ShakeRandomnessMode.Harmonic).SetLoops(-1);
+        // Add a listener to the button
+        _button.onClick.AddListener(OnButtonClick);     
+    }
+
+    private void OnButtonClick()
+    {
+        // If the button is not dragging 
+        if (_rectTransform.anchoredPosition == (Vector2) _initialPosition && isClickable)
+        {   
+            Debug.Log($"Button {_value} clicked");
+            // shake the rotation of the button
+            
+            transform.DOShakeRotation(0.8f, new Vector3(0, 0, 10), 10, 90, true, ShakeRandomnessMode.Harmonic);
+            
+            AudioManager.Instance.PlaySound(_value);
+            isClickable = false;
+            Invoke(nameof(ResetClickable), 1f);
+        }
+       
     }
     
-
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("Drag started");
+        AudioManager.Instance.PlaySound(_value);
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         if (_canvas == null) return;
-
-        // Update the position of the button relative to the canvas
         _rectTransform.anchoredPosition += eventData.delta / _canvas.scaleFactor;
-        
-        
-        
-        // Event when dragging close to the answer box
-        if (Vector3.Distance(transform.position, _answerBoxPosition) <= tolerance)
+        GameObject closestAnswerBox = null;
+        float minDistance = float.MaxValue;
+
+        foreach (var t in answerBoxs)
         {
-            Debug.Log("Dragging close enough to AnswerBox!");
-            _countingGame.answerBox.gameObject.GetComponentInChildren<Image>().color = Color.red;
+            var answerBoxPosition = t.GetComponent<RectTransform>().position;
+            float distance = Vector2.Distance(transform.position, answerBoxPosition);
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                closestAnswerBox = t;
+            }
         }
-        else
+
+        // Đặt tất cả AnswerBox về màu trắng
+        foreach (var t in answerBoxs)
         {
-            _countingGame.answerBox.gameObject.GetComponentInChildren<Image>().color = Color.white;
+            t.GetComponentInChildren<Image>().color = Color.white;
+        }
+
+        if (closestAnswerBox != null && minDistance <= tolerance)
+        {
+            Debug.Log("Dragging close enough to the closest AnswerBox!");
+            closestAnswerBox.GetComponentInChildren<Image>().color = Color.red;
         }
     }
-
     public void OnEndDrag(PointerEventData eventData)
     {
-        
-        // Get the position of the answer box, it has rect transform component
-        // Event when dropped close to the answer box
-        if (Vector3.Distance(transform.position, _answerBoxPosition) <= tolerance)
+        //Find the closest AnswerBox
+        GameObject closestAnswerBox = null;
+        float minDistance = float.MaxValue;
+
+        foreach (var t in answerBoxs)
+        {
+            var answerBoxPosition = t.GetComponent<RectTransform>().position;
+            float distance = Vector2.Distance(transform.position, answerBoxPosition);
+
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                closestAnswerBox = t;
+            }
+        }
+
+        // Check if the closest AnswerBox is within the tolerance
+        if (closestAnswerBox != null && minDistance <= tolerance)
         {
             Debug.Log("Dropped close enough to AnswerBox!");
-            if (_countingGame != null)
+            if (_currentGame != null)
             {
-                _countingGame.SetSelectedAnswer(value); // Xử lý đáp án
-              
+                Debug.Log("Setting selected answer");
+                _currentGame.SetSelectedAnswer(_value, closestAnswerBox);
             }
-
-            Vector3 answerBoxAnchoredPosition = new Vector3(748, 271, 0);
-            _rectTransform.anchoredPosition = _countingGame.CheckWin() ? answerBoxAnchoredPosition : _initialPosition;
+            else
+            {
+                Debug.Log("Current game is null");
+            }
         }
         else
         {
             Debug.Log("Dropped too far. Resetting position.");
-            ResetPosition();
         }
-        _countingGame.answerBox.gameObject.GetComponentInChildren<Image>().color = Color.white;
+
+        ResetPosition();
+        transform.DOShakeRotation(0.8f, new Vector3(0, 0, 10), 10, 90, true, ShakeRandomnessMode.Harmonic);
+
+        foreach (var t in answerBoxs)
+        {
+            t.GetComponentInChildren<Image>().color = Color.white;
+        }
     }
     
     
@@ -91,4 +166,21 @@ public class AnswerButton : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         _rectTransform.anchoredPosition = _initialPosition;
     }
     
+    private void ResetClickable()
+    {
+        isClickable = true;
+    }
+    
+    public void SetValue(string value)
+    {
+        _value = value;
+    }
+    public string GetValues()
+    {
+        return _value;
+    }
+    public void SetAnswerBoxs(List<GameObject> answerBoxs)
+    {
+        this.answerBoxs = answerBoxs;
+    }
 }

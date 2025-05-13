@@ -8,15 +8,16 @@ public class GameManager : MonoBehaviour
 {
     private GameState _currentGameState;
     private Object _gameSettings;
+    public int TimeLooping = 3; // Biến toàn cục lưu số lần lặp 
     
     
     // Install singleton pattern
-    private static GameManager _instance;
+    public  static GameManager Instance;
     private void Awake()
     {
-        if (_instance == null)
+        if (Instance == null)
         {
-            _instance = this;
+            Instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -65,6 +66,9 @@ public class GameManager : MonoBehaviour
     {
         return false;
     }
-   
+    public void ResetTimeLooping()
+    {
+        TimeLooping = 3; // Reset khi cần (ví dụ: khi người chơi bắt đầu lại)
+    }
 }
 

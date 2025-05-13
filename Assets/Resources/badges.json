@@ -1,0 +1,184 @@
+{
+  "badges": [
+    {
+      "BadgeID": "FirstSteps",
+      "Name": "First Steps",
+      "Description": "Hoàn thành bài học toán đầu tiên."
+    },
+    {
+      "BadgeID": "DailyMathematician",
+      "Name": "Daily Mathematician",
+      "Description": "Học toán ít nhất 3 ngày liên tiếp."
+    },
+    {
+      "BadgeID": "CountingPro",
+      "Name": "Counting Pro",
+      "Description": "Hoàn thành bài tập đếm số đầu tiên."
+    },
+    {
+      "BadgeID": "AdditionApprentice",
+      "Name": "Addition Apprentice",
+      "Description": "Hoàn thành phép cộng đầu tiên."
+    },
+    {
+      "BadgeID": "SubtractionStarter",
+      "Name": "Subtraction Starter",
+      "Description": "Hoàn thành phép trừ đầu tiên."
+    },
+    {
+      "BadgeID": "ShapeExplorer",
+      "Name": "Shape Explorer",
+      "Description": "Hoàn thành bài học về hình học."
+    },
+    {
+      "BadgeID": "VirtualHelper",
+      "Name": "Virtual Helper",
+      "Description": "Tương tác với Virtual World lần đầu tiên."
+    },
+    {
+      "BadgeID": "FriendlyPlayer",
+      "Name": "Friendly Player",
+      "Description": "Hoàn thành một bài học cùng bạn bè hoặc người thân."
+    },
+    {
+      "BadgeID": "DedicatedLearner",
+      "Name": "Dedicated Learner",
+      "Description": "Học toán liên tiếp 7 ngày."
+    },
+    {
+      "BadgeID": "PerfectScore",
+      "Name": "Perfect Score",
+      "Description": "Đạt điểm tuyệt đối trong bài kiểm tra toán."
+    },
+    {
+      "BadgeID": "QuickThinker",
+      "Name": "Quick Thinker",
+      "Description": "Hoàn thành một bài toán trong thời gian ngắn."
+    },
+    {
+      "BadgeID": "PuzzleSolver",
+      "Name": "Puzzle Solver",
+      "Description": "Giải xong một câu đố trong game."
+    },
+    {
+      "BadgeID": "VirtualWorldBuilder",
+      "Name": "Virtual World Builder",
+      "Description": "Mở khóa vật phẩm trang trí đầu tiên trong Virtual World."
+    },
+    {
+      "BadgeID": "CountingMaster",
+      "Name": "Counting Master",
+      "Description": "Hoàn thành thử thách đếm từ 1-20."
+    },
+    {
+      "BadgeID": "MathStreak1Week",
+      "Name": "Math Streak (1 Week!)",
+      "Description": "Học toán liên tục trong 7 ngày."
+    },
+    {
+      "BadgeID": "FastCalculator",
+      "Name": "Fast Calculator",
+      "Description": "Giải đúng 10 phép tính liên tiếp trong 30 giây."
+    },
+    {
+      "BadgeID": "ThePatternFinder",
+      "Name": "The Pattern Finder",
+      "Description": "Nhận diện đúng 5 mẫu số hoặc hình học."
+    },
+    {
+      "BadgeID": "VirtualExplorer",
+      "Name": "Virtual Explorer",
+      "Description": "Khám phá một khu vực mới trong Virtual World."
+    },
+    {
+      "BadgeID": "LearningStreak2Weeks",
+      "Name": "Learning Streak (2 Weeks!)",
+      "Description": "Học toán liên tục 14 ngày."
+    },
+    {
+      "BadgeID": "GeometryStarter",
+      "Name": "Geometry Starter",
+      "Description": "Vẽ đúng các hình học cơ bản."
+    },
+    {
+      "BadgeID": "WordProblemSolver",
+      "Name": "Word Problem Solver",
+      "Description": "Giải đúng 5 bài toán có lời văn."
+    },
+    {
+      "BadgeID": "BossDefeated",
+      "Name": "Boss Defeated!",
+      "Description": "Hoàn thành một thử thách \"boss\" toán học."
+    },
+    {
+      "BadgeID": "TheCollector",
+      "Name": "The Collector",
+      "Description": "Thu thập 10 huy hiệu khác nhau."
+    },
+    {
+      "BadgeID": "SpeedMathematician",
+      "Name": "Speed Mathematician",
+      "Description": "Giải đúng 20 bài toán nhanh trong 1 phút."
+    },
+    {
+      "BadgeID": "VirtualLandowner",
+      "Name": "Virtual Landowner",
+      "Description": "Mở khóa công trình đặc biệt trong Virtual World."
+    },
+    {
+      "BadgeID": "MathStreak1Month",
+      "Name": "Math Streak (1 Month!)",
+      "Description": "Học toán liên tục trong 30 ngày."
+    },
+    {
+      "BadgeID": "ChallengeConqueror",
+      "Name": "Challenge Conqueror",
+      "Description": "Hoàn thành tất cả bài kiểm tra trong một chương."
+    },
+    {
+      "BadgeID": "MathWizard",
+      "Name": "Math Wizard",
+      "Description": "Giải đúng 50 bài toán không sai lần nào."
+    },
+    {
+      "BadgeID": "TheGrandmaster",
+      "Name": "The Grandmaster",
+      "Description": "Đạt điểm 10/10 nhiều lần."
+    },
+    {
+      "BadgeID": "GoldenBrain",
+      "Name": "Golden Brain",
+      "Description": "Giải đúng 100 bài toán."
+    },
+    {
+      "BadgeID": "MathMarathoner",
+      "Name": "Math Marathoner",
+      "Description": "Học toán liên tục trong 60 ngày."
+    },
+    {
+      "BadgeID": "VirtualWorldMaster",
+      "Name": "Virtual World Master",
+      "Description": "Mở khóa tất cả nội dung trong Virtual World."
+    },
+    {
+      "BadgeID": "UltimateCollector",
+      "Name": "Ultimate Collector",
+      "Description": "Sưu tầm tất cả các huy hiệu khác."
+    },
+    {
+      "BadgeID": "HiddenTreasure",
+      "Name": "Hidden Treasure",
+      "Description": "Tìm thấy một Easter Egg trong game."
+    },
+    {
+      "BadgeID": "SecretSolver",
+      "Name": "Secret Solver",
+      "Description": "Giải một bài toán siêu khó."
+    },
+    {
+      "BadgeID": "TheLuckyOne",
+      "Name": "The Lucky One",
+      "Description": "Nhận được huy hiệu nhờ một sự kiện đặc biệt."
+    }
+  ]
+}

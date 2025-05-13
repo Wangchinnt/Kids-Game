@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1337899708117509201}
   - component: {fileID: 8618025338081806935}
   - component: {fileID: 7404425676980645513}
+  - component: {fileID: 5970091258355707327}
   m_Layer: 5
   m_Name: AnswerButton
   m_TagString: AnswerButton
@@ -134,8 +135,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 009a5f8988e34806967bad10829f4f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
+  _value: 
+  isClickable: 1
   tolerance: 2
+  _answerBoxs: []
+--- !u!225 &5970091258355707327
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108488464374969215}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &9083915333380955514
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,12 +243,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
+  m_fontSize: 63
   m_fontSizeBase: 70
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 63
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512

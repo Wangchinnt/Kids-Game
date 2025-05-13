@@ -5,7 +5,56 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Scenes/MainMenuScene.unity
+    guid: 54518dbb37f41c8448646b22995df974
+  - enabled: 1
+    path: Assets/Scenes/CountingGameScene.unity
+    guid: 3fc8acdd13e6c734bafef6554d6fdbcd
+  - enabled: 1
+    path: Assets/Scenes/ComparingGameScene.unity
+    guid: f38553c042f66754c9950334a908fd2e
+  - enabled: 1
+    path: Assets/Scenes/FunnyPlusGameScene.unity
+    guid: af6c8f71898405c42ab66a0a95f49ae4
+  - enabled: 1
+    path: Assets/Scenes/PlusPuzzleGameScene.unity
+    guid: d0495ab5b3d768c4c806b1d7f22cd15e
+  - enabled: 1
+    path: Assets/Scenes/PractisePlusGameScene.unity
+    guid: 681632dc8a5c834409cfe15e55014b2a
+  - enabled: 1
+    path: Assets/Scenes/TwoNumberPlusGameScene.unity
+    guid: 0cf73c201c22d6a4282ae4b9ce0d84dc
+  - enabled: 1
+    path: Assets/Scenes/FunnyMinusGameScene.unity
+    guid: f8f6fb94255a87146baadf031e3a9328
+  - enabled: 1
+    path: Assets/Scenes/MinusPuzzleGameScene.unity
+    guid: d546e88f23cb59241a65ddac41f096f3
+  - enabled: 1
+    path: Assets/Scenes/PractiseMinusGameScene.unity
+    guid: 82d4c763a097b434c8bc6a29d722ed8b
+  - enabled: 1
+    path: Assets/Scenes/TwoNumberMinusGameScene.unity
+    guid: 18ed6e9f7e26cca48abcfc7a283f6cb7
+  - enabled: 1
+    path: Assets/Scenes/LearnShapesGameScene.unity
+    guid: a5dd81fa512b9f64cb82af5b860ed4f8
+  - enabled: 1
+    path: Assets/Scenes/LearnDirectionGameScene.unity
+    guid: 9a80ae630e868e041a401286a3631d29
+  - enabled: 1
+    path: Assets/Scenes/Authentication/AuthScene.unity
+    guid: 338ffcefbc54abf4797e123acaac384f
+  - enabled: 1
+    path: Assets/Scenes/LearningMathScene.unity
+    guid: 0bf7437fd3a8e87459b938a85b956954
+  m_configObjects:
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 99713721eb6ef244cbfd047d172a8d5e, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 4ae1cfe5bb6812b44a56df595c91095d, type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: d3c7d0cfce1984f459f75ef30ed53efd, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: b154d536accf1c84abba19cc912da882, type: 2}
