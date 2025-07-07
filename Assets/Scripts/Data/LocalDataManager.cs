@@ -151,5 +151,4 @@ using System.Linq;
         }
 
         // --------- SYNC METHODS (stub) ---------
-        // Bạn có thể thêm các hàm sync dữ liệu từ remote về local tại đây
     }
