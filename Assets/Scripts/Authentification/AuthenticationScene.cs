@@ -207,7 +207,6 @@ public class AuthenticationScene : MonoBehaviour
     {
         if (dob == null)
             return "Vui lòng nhập ngày sinh.";
-        // hãy kiểm tra ngày sinh có phải là ngày hiện tại không
         if (dob > DateTime.Now)
             return "Ngày sinh quá hiện tại, hãy nhập lại.";
         return "";
@@ -221,14 +220,14 @@ public class AuthenticationScene : MonoBehaviour
     private void FemaleButton()
     {
         _gender = "Nữ";
-        // ấn vào nút này thì nút nam đổi sang màu trắng
+        // Turn to white
         femaleButton.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f, 1);
         maleButton.GetComponent<Image>().color = new Color(1, 1, 1, 1);
     }
     private void MaleButton()
     {
         _gender = "Nam";
-        // ấn vào nút này thì nút nữ đổi sang màu trắng
+        // Turn to white
         femaleButton.GetComponent<Image>().color = new Color(1, 1, 1, 1);
         maleButton.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f, 1);
     }
@@ -239,7 +238,7 @@ public class AuthenticationScene : MonoBehaviour
 
         if (email.Contains("@"))
         {
-            // Kiểm tra định dạng email đơn giản
+            // Simple check email
             if (!System.Text.RegularExpressions.Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
                 return "Email không hợp lệ.";
         }
@@ -247,7 +246,7 @@ public class AuthenticationScene : MonoBehaviour
         {
             return "Email không hợp lệ.";
         }
-        return ""; // Hợp lệ
+        return "";
     }
     private string CheckPassword(string password)
     {
